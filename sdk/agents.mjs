@@ -97,6 +97,7 @@ export class NoerraAgentsClient {
   publishSocial(id,input){return this.request('/'+this.id(id)+'/social-publish',input);}
   recoverSocial(id,input){return this.request('/'+this.id(id)+'/social-recover',input);}
   automateSocial(id,input){return this.request('/'+this.id(id)+'/social-automation',input);}
+  automateNativePosts(id,input){return this.request('/'+this.id(id)+'/native-automation',input);}
   automateSocialReplies(id,input){return this.request('/'+this.id(id)+'/social-replies',input);}
   requestRemix(id,input){return this.request('/public/'+this.id(id)+'/remix',input);}
   myRemixes(id){return this.request('/public/'+this.id(id)+'/remix');}

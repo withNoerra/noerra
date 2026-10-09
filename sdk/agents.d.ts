@@ -10,6 +10,9 @@ export interface AgentConfiguration {
   chat?: {enabled: boolean; /** Legacy saved configuration only; room identity uses name and description. */ publicPrompt?: string; minimumTokens: number; dailyMicros: number; walletDailyMicros: number} | null;
 }
 export interface AgentEntry { id: string; text: string; at: number; source: string; published?: boolean; }
+export interface NativePost {id:string;requestId:string;at:number;text:string;source:'native';media?:{requestId:string;kind:'image'|'video';model:string;asset:{sha256:string;mime:string;size:number}};}
+export interface NativePostingInput {enabled:boolean;publicBrief?:string;intervalMs?:number;maximumDailyPosts?:number;expectedRevision?:number;shareToX?:boolean;media?:{imageModel?:string;videoModel?:string;maximumDailyJobs:number;maximumJobMicros:number}|null;}
+export interface NativePostingStatus {policy:NativePostingInput;revision:number;nextAt:number|null;currentDayAttempts:number;currentDayPosts:number;currentDayMediaJobs?:number;pending:{requestId:string;at:number;status:string;mediaRequestId?:string}|null;posts:NativePost[];last:Record<string,unknown>|null;}
 export function newRoomRequestId(now?:number):string;
 export interface BackerRoomMessage {id:string;sequence:number;wallet:`0x${string}`;text:string;at:number;reply:null|{status:'pending'|'completed'|'uncertain'|'unavailable'|'invalid-output'|'cancelled';answer?:string};}
 export interface BackerRoomPage {messages:BackerRoomMessage[];nextBefore:number|null;limits:{messageCharacters:number;retainedMessages:number};mention:'@agent';}
@@ -39,6 +42,8 @@ export interface AgentProfile {
   publicProfile: boolean; journal: AgentEntry[]; pulse: number;
   avatar: boolean;
   socialLinks?:{provider:'x';username:string;url:string}[];
+  socialActivity?:{at:number;postId:string;text:string;url:string;replyTo?:string}[];
+  nativePosts?:NativePost[];
   marketMetrics?: AgentMarketMetrics|null;
   description: string; category: string;
   chat: {enabled: true; minimumTokens: number} | null;
@@ -66,6 +71,8 @@ export interface AgentGasFunding {
   receipts: {id:string;swapHash?:string;withdrawalHash?:string;status:'failed'|'refilled';dollars:string;ethWei:string;at:number}[];
 }
 export interface OwnedAgent extends Omit<AgentProfile,'media'|'lab'> {
+  nativePosting?:NativePostingStatus|null;
+  nativeCrossposts?:{posts:{nativePostId:string;requestId:string;status:string;at:number;reason?:string;postId?:string}[]}|null;
   lab?:OwnedLab|null;
   fundedActivation?: {stage:'waiting'|'started'|'cancelled';policy:string;createdAt:number;at?:number}|null;
   media: AgentMediaJob[];
@@ -171,6 +178,7 @@ export class NoerraAgentsClient {
   /** Explicit owner renewal of a completed, unposted original reply; never regenerates inference. */
   recoverSocial(id:string,input:{requestId:string;resumeReply:true}):Promise<{requestId:string;status:'drafting';replyTo:string;resumed:true}>;
   automateSocial(id:string,input:SocialAutomationInput):Promise<AgentSocialConnection>;
+  automateNativePosts(id:string,input:NativePostingInput):Promise<NativePostingStatus>;
   automateSocialReplies(id:string,input:SocialReplyPolicyInput):Promise<AgentSocialConnection>;
   generateMedia(id:string,input:MediaInput):Promise<AgentMediaJob>;
   recoverMedia(id:string,requestId:string):Promise<AgentMediaJob>;
