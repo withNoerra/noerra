@@ -30,6 +30,7 @@ export interface AgentRun {
   labContext?: boolean;labReport?:string;
   execution?: {harness: 'noerra-bounded' | 'hermes-metered'; steps: number; reason: 'finished' | 'limit' | 'interrupted' | 'tool-denied' | 'invalid-output'};
 }
+export interface AgentRunReceipt {requestId:string;status:AgentRun['status'];publicContext:boolean;publicSources:boolean;actualMicros:number|null;receiptHash:string|null;completedAt:number|null;finalized:boolean;generation?:number;originalStatus?:AgentRun['status'];settlement?:{status:'pending'|'settled'|'blocked';finalized:boolean;acceptedMicros?:number;proofHash?:string};}
 export interface AgentMarketMetrics {
   fdvUsd:string; marketCapUsd:string; priceUsd:string; totalSupply:string;
   circulatingSupply:string; excludedBackedSupply:string; excludedDeadSupply:string;
@@ -163,6 +164,7 @@ export class NoerraAgentsClient {
   fund(id: string, evidence: unknown): Promise<OwnedAgent>;
   funding(id: string): Promise<{ bootstrap?:{enabled:boolean;sourceChainId:1;providerChainId:8453;status:string;gasStage?:string|null;diemStage?:string|null;providerQuotaConfirmed:boolean;paymentRoute?:string}|null; chainId: number; asset: string; token: string; recipient: string; runtimeSigner?: string; fundingMode?: 'surplus-cash' | 'prepaid-usdc' | 'vault-diem' | 'vault-diem-with-cash'; vaultPolicy?: Record<string,unknown> | null; minimumMicros: number; reserveMicros: number; privacy: string; gas?: AgentGasFunding | null; hosting?: {enabled:boolean;status:string;spentMicros:string;gasReservedWei:string;pending:{id:string;stage:string;hash:string|null}|null;receipts:unknown[]}|null; accountPolicy: Record<string,unknown> | null; binding: OwnedAgent['chainAccount']; renewable?: {source: 'provider-diem-balance'; allowance: {creditMicros: number; providerMicros: number; creditDay: number; observedAt: number; expiresAt: number} | null} | null }>;
   bindAccount(id: string,transactionHash: `0x${string}`): Promise<{chainId: number; account: string; agentId: string; owner: string; signer: string; generation: string; buildHash: string; creationHash: string}>;
+  runReceipt(id:string,requestId:string):Promise<AgentRunReceipt>;
   reconcile(id: string, requestId: string): Promise<AgentRun>;
   publish(id: string, draftId: string): Promise<AgentEntry>;
   backup(id: string): Promise<{ encrypted: string; hash: string; at: number; generation: number }>;

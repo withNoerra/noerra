@@ -84,6 +84,7 @@ export class NoerraAgentsClient {
   acceptSourceAccount(id,input){return this.request('/'+this.id(id)+'/accept-source-account',input);}
   bindTransferredSource(id,evidence){return this.request('/'+this.id(id)+'/bind-source-account',evidence);}
   bindAccount(id,transactionHash) { return this.request('/' + this.id(id) + '/bind-account', {transactionHash}); }
+  runReceipt(id,requestId){if(!/^[a-f0-9]{32}$/.test(requestId||''))throw Error('Use the original run request identity.');return this.request('/'+this.id(id)+'/run-receipt/'+requestId);}
   reconcile(id, requestId) { return this.request('/' + this.id(id) + '/reconcile', { requestId }); }
   publish(id, draftId) { return this.request('/' + this.id(id) + '/publish', { draftId }); }
   backup(id) { return this.request('/' + this.id(id) + '/backup', {}); }
