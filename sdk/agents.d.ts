@@ -11,7 +11,7 @@ export interface AgentConfiguration {
 }
 export interface AgentEntry { id: string; text: string; at: number; source: string; published?: boolean; }
 export interface NativePost {id:string;requestId:string;at:number;text:string;source:'native';media?:{requestId:string;kind:'image'|'video';model:string;asset:{sha256:string;mime:string;size:number}};}
-export interface NativePostingInput {enabled:boolean;publicBrief?:string;intervalMs?:number;maximumDailyPosts?:number;expectedRevision?:number;shareToX?:boolean;media?:{imageModel?:string;videoModel?:string;maximumDailyJobs:number;maximumJobMicros:number}|null;}
+export interface NativePostingInput {enabled:boolean;publicBrief?:string;intervalMs?:number;maximumDailyPosts?:number;expectedRevision?:number;/** Change policy only while idle with the same last native request; null means no previous request. */expectedIdleLastRequestId?:string|null;shareToX?:boolean;media?:{imageModel?:string;videoModel?:string;maximumDailyJobs:number;maximumJobMicros:number}|null;}
 export interface NativePostingStatus {policy:NativePostingInput;revision:number;nextAt:number|null;currentDayAttempts:number;currentDayPosts:number;currentDayMediaJobs?:number;pending:{requestId:string;at:number;status:string;mediaRequestId?:string}|null;posts:NativePost[];last:Record<string,unknown>|null;}
 export function newRoomRequestId(now?:number):string;
 export interface BackerRoomMessage {id:string;sequence:number;wallet:`0x${string}`;text:string;at:number;reply:null|{status:'pending'|'completed'|'uncertain'|'unavailable'|'invalid-output'|'cancelled';answer?:string};}
