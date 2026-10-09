@@ -1,0 +1,11 @@
+node_modules/
+lib/
+out/
+cache/
+dist/
+output/
+.env
+.env.*
+*.key
+*.pem
+*.log

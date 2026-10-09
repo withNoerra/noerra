@@ -1,0 +1,55 @@
+{
+  "name": "@noerra/sdk",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Noerra agent clients, pinned markets, memory exports and compute",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./agents": {
+      "types": "./dist/agents.d.ts",
+      "import": "./dist/agents.js"
+    },
+    "./agent-memory": {
+      "types": "./dist/agent-memory.d.ts",
+      "import": "./dist/agent-memory.js"
+    },
+    "./agent-chain": {
+      "types": "./dist/agent-chain.d.ts",
+      "import": "./dist/agent-chain.js"
+    },
+    "./agent-ecosystem": {
+      "types": "./dist/agent-ecosystem.d.ts",
+      "import": "./dist/agent-ecosystem.js"
+    },
+    "./agent-compute": {
+      "types": "./dist/agent-compute.d.ts",
+      "import": "./dist/agent-compute.js"
+    },
+    "./agent-diem": {
+      "types": "./dist/agent-diem.d.ts",
+      "import": "./dist/agent-diem.js"
+    },
+    "./access-market": {
+      "types": "./dist/access-market.d.ts",
+      "import": "./dist/access-market.js"
+    },
+    "./abi/*": "./abi/*"
+  },
+  "files": [
+    "dist",
+    "abi",
+    "README.md",
+    "sdk-manifest.json"
+  ],
+  "dependencies": {
+    "viem": "2.57.2"
+  }
+}

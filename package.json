@@ -1,0 +1,29 @@
+{
+  "name": "noerra-public",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Noerra contracts, SDK and documentation",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "deps": "node scripts/install-contract-deps.mjs",
+    "build:contracts": "forge build",
+    "test:contracts": "forge test",
+    "build:sdk": "node scripts/build-sdk.mjs",
+    "package:sdk": "node scripts/package-sdk.mjs",
+    "verify:sdk": "node scripts/verify-sdk.mjs",
+    "check:docs": "node scripts/check-docs.mjs",
+    "verify": "npm run test:contracts && npm run test:sdk && npm run build:sdk && npm run verify:sdk && npm run check:docs",
+    "test:sdk": "node --test test/sdk.test.mjs"
+  },
+  "dependencies": {
+    "viem": "2.57.2"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12",
+    "playwright": "1.62.1",
+    "typescript": "5.9.3"
+  }
+}
