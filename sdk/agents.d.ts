@@ -1,3 +1,4 @@
+import type {EarnedDiemStatus,EarnedDiemReceiptInput,EarnedDiemReceipt} from './earned-diem.js';
 export interface AgentConfiguration {
   name: string; purpose: string; model: string;
   avatar?: string | null;
@@ -162,6 +163,8 @@ export class NoerraAgentsClient {
   control(id: string, action: 'start' | 'pause'): Promise<OwnedAgent>;
   run(id: string, task: string, requestId: string): Promise<AgentRun>;
   fund(id: string, evidence: unknown): Promise<OwnedAgent>;
+  earnedDiem(id:string):Promise<EarnedDiemStatus>;
+  earnedDiemReceipt(id:string,input:EarnedDiemReceiptInput):Promise<EarnedDiemReceipt>;
   funding(id: string): Promise<{ bootstrap?:{enabled:boolean;sourceChainId:1;providerChainId:8453;status:string;gasStage?:string|null;diemStage?:string|null;providerQuotaConfirmed:boolean;paymentRoute?:string}|null; chainId: number; asset: string; token: string; recipient: string; runtimeSigner?: string; fundingMode?: 'surplus-cash' | 'prepaid-usdc' | 'vault-diem' | 'vault-diem-with-cash'; vaultPolicy?: Record<string,unknown> | null; minimumMicros: number; reserveMicros: number; privacy: string; gas?: AgentGasFunding | null; hosting?: {enabled:boolean;status:string;spentMicros:string;gasReservedWei:string;pending:{id:string;stage:string;hash:string|null}|null;receipts:unknown[]}|null; accountPolicy: Record<string,unknown> | null; binding: OwnedAgent['chainAccount']; renewable?: {source: 'provider-diem-balance'; allowance: {creditMicros: number; providerMicros: number; creditDay: number; observedAt: number; expiresAt: number} | null} | null }>;
   bindAccount(id: string,transactionHash: `0x${string}`): Promise<{chainId: number; account: string; agentId: string; owner: string; signer: string; generation: string; buildHash: string; creationHash: string}>;
   runReceipt(id:string,requestId:string):Promise<AgentRunReceipt>;

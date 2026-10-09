@@ -1,6 +1,7 @@
 import { getAddress, keccak256, stringToHex, parseUnits, formatUnits, erc20Abi, decodeEventLog, parseAbi, encodeAbiParameters, verifyMessage } from 'viem';
 import { AccessMarket } from './access-market.mjs';
 import {readAgentStewardship} from './internal/stewardship.mjs';
+export {NoerraEarnedDiem} from './earned-diem.mjs';
 export {NoerraAgentDiem} from './agent-diem.mjs';
 export {NoerraComputePool} from './agent-compute.mjs';
 export {NoerraEcosystem,NoerraFlagshipMarket} from './agent-ecosystem.mjs';

@@ -1,5 +1,6 @@
 export interface AgentChainPin { address: `0x${string}`; codeHash: `0x${string}`; }
 export interface AgentChainPins {providerMode?:'cash-only'|'legacy-diem';cashDeployer?:AgentChainPin;launchProtectionHook?:AgentChainPin;ecosystemVault?:AgentChainPin;legacyQuoter?:AgentChainPin;baseBridge?:`0x${string}`;baseLaunchpad?:`0x${string}`;compatibilityTargets?:{deployed:false;registry:`0x${string}`;launchpad:`0x${string}`;standardBridge:`0x${string}`};}
+export {NoerraEarnedDiem} from './earned-diem.js';
 export {NoerraAgentDiem} from './agent-diem.js';
 export {NoerraComputePool} from './agent-compute.js';
 export {NoerraEcosystem,NoerraFlagshipMarket} from './agent-ecosystem.js';

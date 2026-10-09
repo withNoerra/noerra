@@ -30,9 +30,16 @@ Run `npm run verify:sdk` to check the prepared package in isolation.
 | `@noerra/sdk/agent-ecosystem` | Separate NOERRA market integration |
 | `@noerra/sdk/agent-compute` | Optional compute-market integration |
 | `@noerra/sdk/agent-diem` | Optional DIEM integration |
+| `@noerra/sdk/earned-diem` | Creator controls and original receipt recovery for a verified earned-DIEM reserve |
 
 Only use a route enabled by the selected service and verified deployment.
 Optional exports do not imply that a provider or market is available.
+
+`agents.earnedDiem(agentId)` reads owner-only reserve readiness.
+`NoerraEarnedDiem` signs the selected contract action in the connected wallet
+and retains its original transaction until the service verifies finality.
+Targets use the deployment’s reviewed bound; recovery uses its fixed treasury.
+An unavailable deployment or keeper leaves purchase controls disabled.
 
 ## Read a public profile
 

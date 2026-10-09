@@ -5,3 +5,4 @@ export * from './agent-ecosystem.js';
 export * from './agent-compute.js';
 export * from './agent-diem.js';
 export * from './access-market.js';
+export * from './earned-diem.js';

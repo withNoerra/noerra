@@ -41,7 +41,11 @@
       "types": "./dist/access-market.d.ts",
       "import": "./dist/access-market.js"
     },
-    "./abi/*": "./abi/*"
+    "./abi/*": "./abi/*",
+    "./earned-diem": {
+      "types": "./dist/earned-diem.d.ts",
+      "import": "./dist/earned-diem.js"
+    }
   },
   "files": [
     "dist",

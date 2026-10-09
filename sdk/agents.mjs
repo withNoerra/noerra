@@ -79,6 +79,8 @@ export class NoerraAgentsClient {
   control(id, action) { return this.request('/' + this.id(id) + '/control', { action }); }
   run(id, task, requestId) { return this.request('/' + this.id(id) + '/run', { task, requestId }); }
   fund(id, evidence) { return this.request('/' + this.id(id) + '/fund', evidence); }
+  earnedDiem(id){return this.request('/'+this.id(id)+'/earned-diem');}
+  earnedDiemReceipt(id,input){return this.request('/'+this.id(id)+'/earned-diem/receipt',input);}
   funding(id) { return this.request('/' + this.id(id) + '/funding', {}); }
   computer(id,input) {return this.request('/'+this.id(id)+'/computer',input);}
   acceptSourceAccount(id,input){return this.request('/'+this.id(id)+'/accept-source-account',input);}

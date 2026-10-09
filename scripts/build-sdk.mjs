@@ -1,7 +1,7 @@
 import {build} from 'esbuild';
 import {mkdir,mkdtemp,readFile,writeFile,copyFile,lstat} from 'node:fs/promises';
 import {createHash} from 'node:crypto';import {resolve,join,sep} from 'node:path';import {fileURLToPath,pathToFileURL} from 'node:url';
-export const SDK_MODULES=Object.freeze(['agents','agent-memory','agent-chain','agent-ecosystem','agent-compute','agent-diem','access-market']);
+export const SDK_MODULES=Object.freeze(['agents','agent-memory','agent-chain','agent-ecosystem','agent-compute','agent-diem','earned-diem','access-market']);
 export const SDK_INTERNAL=Object.freeze(['stewardship','automatic-activation-intent']);
 const repo=fileURLToPath(new URL('../',import.meta.url));
 const exists=async path=>{try{return (await lstat(path)).isFile();}catch(e){if(e.code==='ENOENT')return false;throw e;}};

@@ -16,7 +16,7 @@
     "verify:sdk": "node scripts/verify-sdk.mjs",
     "check:docs": "node scripts/check-docs.mjs",
     "verify": "npm run test:contracts && npm run test:sdk && npm run build:sdk && npm run verify:sdk && npm run check:docs",
-    "test:sdk": "node --test test/sdk.test.mjs"
+    "test:sdk": "node --test test/sdk.test.mjs test/earned-diem-sdk.test.mjs"
   },
   "dependencies": {
     "viem": "2.57.2"
