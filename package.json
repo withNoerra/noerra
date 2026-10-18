@@ -1,0 +1,65 @@
+{
+  "name": "@noerra/sdk",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Noerra agents, agent token markets, brain funds and compute",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "types": "./sdk/agents.d.ts",
+  "exports": {
+    ".": {
+      "types": "./sdk/agents.d.ts",
+      "import": "./sdk/agents.mjs"
+    },
+    "./agents": {
+      "types": "./sdk/agents.d.ts",
+      "import": "./sdk/agents.mjs"
+    },
+    "./agent-chain": {
+      "types": "./sdk/agent-chain.d.ts",
+      "import": "./sdk/agent-chain.mjs"
+    },
+    "./agent-tools": {
+      "types": "./sdk/agent-tools.d.ts",
+      "import": "./sdk/agent-tools.mjs"
+    },
+    "./agent-memory": {
+      "types": "./sdk/agent-memory.d.ts",
+      "import": "./sdk/agent-memory.mjs"
+    },
+    "./agent-diem": {
+      "types": "./sdk/agent-diem.d.ts",
+      "import": "./sdk/agent-diem.mjs"
+    },
+    "./agent-compute": {
+      "types": "./sdk/agent-compute.d.ts",
+      "import": "./sdk/agent-compute.mjs"
+    },
+    "./agent-ecosystem": {
+      "types": "./sdk/agent-ecosystem.d.ts",
+      "import": "./sdk/agent-ecosystem.mjs"
+    },
+    "./earned-diem": {
+      "types": "./sdk/earned-diem.d.ts",
+      "import": "./sdk/earned-diem.mjs"
+    },
+    "./fee-policy": {
+      "types": "./sdk/fee-policy.d.ts",
+      "import": "./sdk/fee-policy.mjs"
+    }
+  },
+  "scripts": {
+    "build:contracts": "forge build"
+  },
+  "dependencies": {
+    "viem": "2.57.2",
+    "@noble/ciphers": "2.4.0",
+    "@noble/curves": "1.9.1",
+    "@noble/hashes": "1.8.0",
+    "@noble/post-quantum": "0.7.1",
+    "noerra-hashes": "npm:@noble/hashes@2.0.1"
+  }
+}

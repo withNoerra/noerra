@@ -1,0 +1,17 @@
+{
+  "version": 4,
+  "status": "not-deployed",
+  "deployed": false,
+  "broadcasts": 0,
+  "providerMode": "cash-only",
+  "ethereum": {
+    "chainId": 1,
+    "addresses": {}
+  },
+  "providerPayments": {
+    "chainId": 8453,
+    "asset": "USDC",
+    "agentTokenDeployments": 0
+  },
+  "validity": "No production contract addresses have been published. Publish only finalized, verified deployment addresses; nonce predictions and local test addresses are not funding recipients."
+}

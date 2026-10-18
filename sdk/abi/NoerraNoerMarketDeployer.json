@@ -1,0 +1,87 @@
+[
+  {
+    "type": "constructor",
+    "inputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "deploy",
+    "inputs": [
+      {
+        "name": "manager",
+        "type": "address",
+        "internalType": "contract IPoolManager"
+      },
+      {
+        "name": "dollar",
+        "type": "address",
+        "internalType": "contract IERC20"
+      },
+      {
+        "name": "noer",
+        "type": "address",
+        "internalType": "contract IERC20"
+      },
+      {
+        "name": "ecosystem",
+        "type": "address",
+        "internalType": "contract NoerraEcosystemVault"
+      },
+      {
+        "name": "salt",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      },
+      {
+        "name": "feed",
+        "type": "address",
+        "internalType": "contract INoerraPlatformEthUsdFeed"
+      },
+      {
+        "name": "maximumAge",
+        "type": "uint32",
+        "internalType": "uint32"
+      },
+      {
+        "name": "access",
+        "type": "address[]",
+        "internalType": "address[]"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "result",
+        "type": "address",
+        "internalType": "contract NoerraNoerMarket"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "hookCreationCode",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "owner",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  }
+]

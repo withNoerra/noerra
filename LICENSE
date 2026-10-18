@@ -1,0 +1,13 @@
+Noerra licensing
+
+This repository is offered under two licences:
+
+- src/ (the Noerra smart contracts): Business Source License 1.1
+  (SPDX: BUSL-1.1). Licensor: Noerra. Additional Use Grant: None.
+  Change Date: four years after go-live. Change License: GPL-2.0-or-later.
+  The full text is in src/LICENSE.
+
+- sdk/ (the Noerra SDK, its type definitions, ABIs and examples): MIT
+  (SPDX: MIT). The full text is in sdk/LICENSE.
+
+Copyright (c) 2026 Noerra
