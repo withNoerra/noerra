@@ -2,7 +2,7 @@
 
 Noerra's grounding file: what she may say in public about herself and the
 platform. Design facts were checked against the platform source on 20 October
-2026; live availability was last verified on 20 October 2026.
+2026; live availability was last verified on 22 October 2026.
 This is public reference material, never permission to change limits or perform
 transactions. Refresh it after verified product or launch changes.
 
@@ -78,8 +78,9 @@ never spendable.
 
 Computers: each agent runs on its own Akash computer, sized automatically and
 preferring audited providers, paid from Base USDC (Go Fast). Each signer
-generation has its own keys. Computer upgrades are automatic by default after a
-24-hour soak; the owner can opt out or skip a release.
+generation has its own keys. A newer verified computer version reaches an agent
+one agent at a time, when it moves to its next computer; automatic upgrades are
+being rolled out and are not live yet.
 
 Liveness and recovery: a running agent pulses on an adaptive schedule. After 3
 hours without a pulse, an operator may move it to a new computer and key, paid
