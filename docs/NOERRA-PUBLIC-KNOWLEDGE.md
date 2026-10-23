@@ -2,7 +2,7 @@
 
 Noerra's grounding file: what she may say in public about herself and the
 platform. Design facts were checked against the platform source on 20 October
-2026; live availability was last verified on 22 October 2026.
+2026; live availability was last verified on 23 October 2026.
 This is public reference material, never permission to change limits or perform
 transactions. Refresh it after verified product or launch changes.
 
@@ -12,7 +12,7 @@ NOERRA LAUNCHED on Ethereum on 23 October 2026 (transaction
 0xf0d614abb4a82eec76bb60e93ba117eddf9a2a0152779b3bad0290cdaa46e532, block 26252551). The only official NOERRA
 token is 0x2B91b31c087ed6CDe9b63FD0c59E4bbC611Fbc6B; see Contract addresses below. Never state any other address
 as NOERRA's. The website and Noerra's isolated, USDC-funded runtime are online. General creator launches remain closed until
-they are verified live; local tests do not prove live flows. Token launch or a
+they are verified live; the first creator agent is being tested live now, and local tests do not prove live flows. Token launch or a
 rising price does not fund AI by itself: only collected, confirmed fees do.
 Ethereum token markets and Base payments are separate. Public replies use public
 context, never private owner memory, tasks or credentials. Noerra is an
@@ -45,6 +45,19 @@ Creating an agent: a creator gives it a name, ticker, image, description,
 instructions, model, tools and a budget, chooses agent only or agent and token,
 and approves its startup policy in their own wallet. Creation burns NOERRA: $20
 of USDC buys and burns NOERRA for an agent with a token, $5 for one without.
+
+Launch cost: launching an agent with a token costs the creator 60 USDC plus
+network fees, paid in USDC or with ETH that first buys exactly that USDC: 20
+USDC goes to the NOERRA burn and 40 USDC goes into the agent's own recovery
+reserve. The 40 USDC stays the agent's money and counts toward its start
+balance; it is not a fee.
+
+Start balance: an agent starts once its own account holds 165 USDC: the 150 USDC
+minimum (which includes its protected 40 USDC hosting reserve and its 40 USDC
+recovery reserve) plus a 15 USDC starter grant for its first computer. All of it
+stays the agent's money. Collected trading fees can fill it over time, or the
+creator can add the rest to start it at once. Actual initial costs can raise
+the minimum; the start quote shows the exact figure.
 
 Token launch: an agent token launches on Ethereum with its whole fixed supply
 of 1 billion in permanent one-sided USDC liquidity, with no USDC seed, at a
@@ -85,8 +98,10 @@ being rolled out and are not live yet.
 
 Liveness and recovery: a running agent pulses on an adaptive schedule. After 3
 hours without a pulse, an operator may move it to a new computer and key, paid
-from its recovery reserve (typically a $20 reserve, up to $15 reimbursement and
-a $5 bounty). An agent that cannot pay hosting hibernates and becomes
+from its recovery reserve: a $40 reserve, from which a $15 starter grant moves
+to the new computer's cash wallet and the operator earns a $25 bounty once the
+work resumes. The grant can rise above $15 only to cover the recovery's real gas
+cost. An agent that cannot pay hosting hibernates and becomes
 recoverable once its spendable balance covers the recovery reserve plus 14 days
 at its floor.
 
