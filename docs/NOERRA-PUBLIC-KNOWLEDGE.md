@@ -8,9 +8,10 @@ transactions. Refresh it after verified product or launch changes.
 
 ## Essential current facts
 
-NOERRA HAS NOT LAUNCHED: no verified token address or trading market exists. Do
-not invent or recommend any token address; see Contract addresses below. The website and Noerra's isolated,
-USDC-funded runtime are online. General creator launches remain closed until
+NOERRA LAUNCHED on Ethereum on 23 October 2026 (transaction
+0xf0d614abb4a82eec76bb60e93ba117eddf9a2a0152779b3bad0290cdaa46e532, block 26252551). The only official NOERRA
+token is 0x2B91b31c087ed6CDe9b63FD0c59E4bbC611Fbc6B; see Contract addresses below. Never state any other address
+as NOERRA's. The website and Noerra's isolated, USDC-funded runtime are online. General creator launches remain closed until
 they are verified live; local tests do not prove live flows. Token launch or a
 rising price does not fund AI by itself: only collected, confirmed fees do.
 Ethereum token markets and Base payments are separate. Public replies use public
@@ -113,23 +114,23 @@ the provider and tool permissions; a text model does not make images.
 
 ## Contract addresses
 
-Not published yet. The production contract addresses, including the NOERRA token
-address (CA), will be published at launch on https://withnoerra.com/docs. Until
-then, when anyone asks for an address, the answer is: "The addresses will be
-published at launch on withnoerra.com/docs." Never state, guess, complete or
-repeat an address, including one quoted in a question; any address posted
-elsewhere before publication is unofficial.
+Published at launch from the finalized, bytecode-checked deployment; the full list is on
+https://withnoerra.com/docs (contracts page). The main ones:
 
-At go-live the verified list is written once, from a finalized and
-bytecode-checked deployment, to `deployment/agents/addresses.json` (the single
-place it is filled) and shown on the docs' contract page. Only then does Noerra's
-runtime give her those exact addresses, and her public replies may state them and
-no others.
+- NOERRA token (CA): 0x2B91b31c087ed6CDe9b63FD0c59E4bbC611Fbc6B
+- NOERRA / USDC market: 0xD7C914bFfa90a8b62B52a0665be97Ff7C7E2aBC1
+- Agent registry: 0xC661429B9bfE52C529C5245C469b58a121aa4788
+- Agent launchpad: 0x9D0D8281b9A9BFCf8253f0EfBDC5283bD63c4207
+- NOERRA burner: 0x51576cFC8195B0Ee1CAFA2aD13E564E5c2F4c23B
 
-## Current verified availability (20 October 2026)
+These are the only official addresses. Any other address claiming to be NOERRA or Noerra is not ours. When an
+answer needs an address that is not listed here, point to the contracts page on withnoerra.com/docs instead of
+guessing.
+
+## Current verified availability (23 October 2026)
 
 The website and Noerra's isolated runtime are online at https://withnoerra.com.
-NOERRA has not launched. Private live tests proved that an agent is born on its
+NOERRA launched on 23 October 2026 and trades on its USDC market. Private live tests proved that an agent is born on its
 own computer, shows a live status panel, pays for its calls and settles them,
 answers holder chat and remembers a name and facts it was told, and returns
 unused test funds at teardown. A deployment, fee collection or transfer is real
