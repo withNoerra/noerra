@@ -1,17 +1,98 @@
 {
   "version": 4,
-  "status": "not-deployed",
-  "deployed": false,
-  "broadcasts": 0,
+  "status": "confirmed-verified",
+  "confirmationPolicy": "receipt-and-current-canonical-state",
+  "deployed": true,
   "providerMode": "cash-only",
   "ethereum": {
     "chainId": 1,
-    "addresses": {}
+    "finalizedBlock": {
+      "number": "26252579",
+      "hash": "0x148195703ddeedc12e455a4b450d8843b973c07966cd9a831b682253cd39e87a"
+    },
+    "addresses": {
+      "noerra": "0x2B91b31c087ed6CDe9b63FD0c59E4bbC611Fbc6B",
+      "noerraMarket": "0xD7C914bFfa90a8b62B52a0665be97Ff7C7E2aBC1",
+      "noerraFeeHook": "0x83bf6461bd29a207127aD347707844EFfC9068cc",
+      "ecosystemVault": "0x6425b5b39dD974Af84cB771E429Cb75Dc59781C4",
+      "registry": "0xC661429B9bfE52C529C5245C469b58a121aa4788",
+      "recoveryVerifier": "0x23A8425C4B8a7A573AE2f4eC90223B967Ef664A2",
+      "launchpad": "0x9D0D8281b9A9BFCf8253f0EfBDC5283bD63c4207",
+      "launchProtectionHook": "0x98A09039fD1f48b61Ea55884bC99d9ab231e20Cc",
+      "cashDeployer": "0x6d784fB1029072f61919218D2594a46965050E86",
+      "tokenDeployer": "0x99572847EE300C958Ff484C44733EFACb00E3Ed4",
+      "creationTokenDeployer": "0x1342384cA7a6265F89643CcD212F77BC7B5e515d",
+      "protectedQuoter": "0x33f2C8A602dab6430cFB0571839BA76D7762eb8f",
+      "ecosystemQuoter": "0x45c70B8215eF9ae953d303875ABd9b333355c7ea",
+      "messages": "0x8ADEb2fDe48E0EadF9ACb26FB0a17C654e6ecd96",
+      "checkout": "0x95D16A2fc15836B300E97A58AbD9679Fe5356Ce3",
+      "credits": "0x5E2A3419B7Dc1321797553Fad80C987109F21B31",
+      "usdc": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "poolManager": "0x000000000004444c5dc75cB358380D2e3dE08A90",
+      "ethUsdFeed": "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
+      "burner": "0x51576cFC8195B0Ee1CAFA2aD13E564E5c2F4c23B",
+      "brainEscrowDeployer": "0x568c04189FCf88aC537E6B34f34D201bb58914aD",
+      "authorityMessenger": "0xd9fDD357D42d93bA76E2671e1516f172fF5444a3",
+      "computeMarket": "0xb358B1289c28111DaD90783dFE22b6c9d39C585B",
+      "computeTreasury": "0x0163584176915b64929445d0595D3984ebc4A356",
+      "capacityAccount": "0xc543E624ed848DF9eC18854A28bE77b74d56dB8C",
+      "kmsApplicationFactory": "0x318771Ec561B8CF5cB67130314cd89078aadC0D7",
+      "flagshipAccount": "0xf9cFFfb41aA48bB534737d1cD9e0800E22E33251"
+    },
+    "codeHashes": {
+      "noerra": "0x058494b173b060730874fa07582e32d03eeddc40466a1131d557020e1f632eeb",
+      "noerraMarket": "0xc757384ee4dba8ad5f1e424dea372eaa5baa0fda375ec4e173132745f22def13",
+      "noerraFeeHook": "0xc14ff3c37b1cbe5a486843b06d04dc7dedbfac77320c7817733f2b36c3a55eb5",
+      "ecosystemVault": "0xb96e8fba222df64dad1bfaeb25fd4389c45d626514d76b79b0f45c7111d881c0",
+      "registry": "0x22dcea27986b00028fc01dcfea2e007c1e61d25477c39e7d060e24546f7379a1",
+      "recoveryVerifier": "0x31b7a0a755d2c51266d0ebc5f82800a0cdcccddfae2a96a72da2ff2b9b0f29a1",
+      "launchpad": "0x66067e63f3c5d671ac7f1a0ca95636bd56d30275873dc8bc6040400629564e94",
+      "launchProtectionHook": "0x7d4e49a8515106e5f47df60411fe707456b34ac0e25da76305debfe0a59d9ff7",
+      "cashDeployer": "0x5f33654e8ccb1dea1deed180e10b378e41d4f270414393f8ea938bfc7d827747",
+      "tokenDeployer": "0xf328257b3a43cd89eff85eaa9bdf84ead0ee24524c93537dce88336a7f39a34b",
+      "creationTokenDeployer": "0x27073e20b87ebffc0b7fcbb1580940844df81d15cbe8d47cccb35e16c7ba73a1",
+      "protectedQuoter": "0x97e50dc554427a52dfcc9391e64d636f34d7a12c967c92a69f38a3f631bab45a",
+      "ecosystemQuoter": "0x97e50dc554427a52dfcc9391e64d636f34d7a12c967c92a69f38a3f631bab45a",
+      "messages": "0x3ab049de34136f316f0d71984647c6d7f387abb88160b6f927b1d272dad1b0ce",
+      "checkout": "0x39b11d22db879af9f741c5e8c54710409f1b8d02fcd9d999e7bdf3f303d2f099",
+      "credits": "0x997f0e86b7155483024e562b9510560be9457d784bdbdc171f47fc522189f9ad",
+      "usdc": "0xd80d4b7c890cb9d6a4893e6b52bc34b56b25335cb13716e0d1d31383e6b41505",
+      "poolManager": "0x785f1014552b7ce7d5fb7d0c970ca60edee94fd00425d7ca21609acac7ce1293",
+      "ethUsdFeed": "0x4b79b5c8aee6da0f7b393e8b53e6265ef7320a1d16184c65bd3841b5aa3d700d",
+      "burner": "0x31dcec60ac67a090ed8275333acadc09d7b0775151bb21d45a19a888f7b48e95",
+      "brainEscrowDeployer": "0x2866d9c2c486b1a4c9b8a01b3ab5e66b9321b6a4f5ef81f025c3ea642e298f15",
+      "authorityMessenger": "0x6955bda176b53b42dfc1de4bcf14b7afc03f2d7af086f507739ebed2c25a8143",
+      "computeMarket": "0x2320f2f2d09b0d25f25a447f96e4e170de20d48cb39da14fd04c192d34300b5c",
+      "computeTreasury": "0x7ce6207c52595c480d281b2b0a265832013dd02a86794aa6f95b4bb398de6b97",
+      "capacityAccount": "0xc130a28fea163e57e1c90b48423215cc1a47fab420fb7bf66fe4d0c9f4c98216",
+      "kmsApplicationFactory": "0x8f56346585efa7f5bcd7e7cc77c201bfe3273948307a99dbd44b395a10a714f6",
+      "flagshipAccount": "0x8d77b5c235a01413f048f2e99119ccaf0b62e8c86f1bea65893236dc6105b48d"
+    }
+  },
+  "base": {
+    "chainId": 8453,
+    "verifiedBlock": {
+      "number": "52968037",
+      "hash": "0x52c7ba9673d2d663d96ed5ed239069284312af6f77a666d4d993ae5fd90639dc"
+    },
+    "addresses": {
+      "authorityMirrorRegistry": "0xDb5d94aEea56d234f228b048d4a65C5f9929602B",
+      "brainFundFactory": "0x7877d2a4c4835cC123625Aa0ebEaE4814e856f0c"
+    },
+    "codeHashes": {
+      "authorityMirrorRegistry": "0xebc5710d8cf4789d2476ee2b9c63814f76b8829edad71a3647909e7a4df2aa00",
+      "brainFundFactory": "0x391ab0e71debe1f8f280e14731a7bc25d4024d4298d981b3c98e381e54e835b8"
+    }
+  },
+  "noerraLaunch": {
+    "kind": "deferred-initialize",
+    "transactionHash": "0xf0d614abb4a82eec76bb60e93ba117eddf9a2a0152779b3bad0290cdaa46e532",
+    "block": "26252551"
   },
   "providerPayments": {
     "chainId": 8453,
     "asset": "USDC",
     "agentTokenDeployments": 0
   },
-  "validity": "No production contract addresses have been published. Publish only finalized, verified deployment addresses; nonce predictions and local test addresses are not funding recipients."
+  "validity": "Contract runtime bytecode was checked at the recorded confirmed Ethereum block following successful deployment capture, and the Base contracts at the recorded Base block. Runtime and SDK configuration require the complete captured wiring and policy pins."
 }
