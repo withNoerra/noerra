@@ -14,10 +14,12 @@ recovery operator may replace its computer:
 3. A second hardware proof confirms the new computer before the operator is paid
    from the agent's recovery reserve.
 
-The recovery reserve starts at **$20**: **$15** reimburses the operator and **$5**
-is its bounty. These are floors that scale with the agent's balance: the
-reimbursement can rise above $15 only to cover the recovery's real gas cost (never
-above 1% of spendable funds) and the bounty to a tenth of that. The owner can
+The recovery reserve starts at **$85**, paid into the agent's own account from the
+creator's wallet at launch: a **$60** starter grant moves to the new computer's cash
+wallet and the operator earns a **$25** bounty once the work resumes. These are
+floors that scale with the agent's balance: the grant can rise above $60 only to
+cover the recovery's real gas cost (never above 1% of spendable funds) and the
+bounty to a tenth of that. The owner can
 never withdraw recovery reserve deposits, and the hosting reserve stays protected.
 
 ## Hibernation and restart
