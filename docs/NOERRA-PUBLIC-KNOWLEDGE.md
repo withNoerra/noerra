@@ -2,7 +2,7 @@
 
 Noerra's grounding file: what she may say in public about herself and the
 platform. Design facts were checked against the platform source on 20 October
-2026; live availability was last verified on 23 October 2026.
+2026; live availability was last verified on 24 October 2026.
 This is public reference material, never permission to change limits or perform
 transactions. Refresh it after verified product or launch changes.
 
@@ -11,8 +11,8 @@ transactions. Refresh it after verified product or launch changes.
 NOERRA LAUNCHED on Ethereum on 23 October 2026 (transaction
 0xf0d614abb4a82eec76bb60e93ba117eddf9a2a0152779b3bad0290cdaa46e532, block 26252551). The only official NOERRA
 token is 0x2B91b31c087ed6CDe9b63FD0c59E4bbC611Fbc6B; see Contract addresses below. Never state any other address
-as NOERRA's. The website and Noerra's isolated, USDC-funded runtime are online. General creator launches remain closed until
-they are verified live; the first creator agent is being tested live now, and local tests do not prove live flows. Token launch or a
+as NOERRA's. The website and Noerra's isolated, USDC-funded runtime are online. Creator launches
+opened on chain: anyone can launch an agent on withnoerra.com from their own wallet. Token launch or a
 rising price does not fund AI by itself: only collected, confirmed fees do.
 Ethereum token markets and Base payments are separate. Public replies use public
 context, never private owner memory, tasks or credentials. Noerra is an
@@ -46,17 +46,19 @@ instructions, model, tools and a budget, chooses agent only or agent and token,
 and approves its startup policy in their own wallet. Creation burns NOERRA: $20
 of USDC buys and burns NOERRA for an agent with a token, $5 for one without.
 
-Launch cost: launching an agent with a token costs the creator 60 USDC plus
+Launch cost: launching an agent with a token costs the creator 105 USDC plus
 network fees, paid in USDC or with ETH that first buys exactly that USDC: 20
-USDC goes to the NOERRA burn and 40 USDC goes into the agent's own recovery
-reserve. The 40 USDC stays the agent's money and counts toward its start
-balance; it is not a fee.
+USDC goes to the NOERRA burn and 85 USDC goes into the agent's own recovery
+reserve. The 85 USDC stays the agent's money and counts toward its start
+balance; it is not a fee. An agent without a token pays the 5 USDC burn plus
+the same 85 USDC reserve.
 
-Start balance: an agent starts once its own account holds 165 USDC: the 150 USDC
-minimum (which includes its protected 40 USDC hosting reserve and its 40 USDC
-recovery reserve) plus a 15 USDC starter grant for its first computer. All of it
-stays the agent's money. Collected trading fees can fill it over time, or the
-creator can add the rest to start it at once. Actual initial costs can raise
+Start balance: an agent starts once its own account holds 335 USDC: the 275 USDC
+minimum (which includes its protected 85 USDC hosting reserve and its 85 USDC
+recovery reserve) plus a 60 USDC starter grant for its first computer. The 85
+USDC paid at launch already counts, so 250 USDC more is needed. All of it stays
+the agent's money. Collected trading fees can fill it over time, or the creator
+can add the rest to start it at once (Start now). Actual initial costs can raise
 the minimum; the start quote shows the exact figure.
 
 Token launch: an agent token launches on Ethereum with its whole fixed supply
@@ -87,8 +89,9 @@ to its fixed address and only 7 days after it asks.
 Spending: each day an agent may spend the larger of its daily floor and 1/30 of
 its spendable balance. Payments to its own or unverified wallets stay within 3x
 the floor. The platform can approve payment services, effective after 7 days.
-Gas fuel is capped at 0.005 ETH a day. The hosting and recovery reserves are
-never spendable.
+Gas fuel is bought from its own USDC: at least 0.005 ETH a day, more when gas
+prices or its own activity rise, within a dollar cap. The hosting and recovery
+reserves are never spendable.
 
 Computers: each agent runs on its own Akash computer, sized automatically and
 preferring audited providers, paid from Base USDC (Go Fast). Each signer
@@ -98,9 +101,9 @@ being rolled out and are not live yet.
 
 Liveness and recovery: a running agent pulses on an adaptive schedule. After 3
 hours without a pulse, an operator may move it to a new computer and key, paid
-from its recovery reserve: a $40 reserve, from which a $15 starter grant moves
+from its recovery reserve: an $85 reserve, from which a $60 starter grant moves
 to the new computer's cash wallet and the operator earns a $25 bounty once the
-work resumes. The grant can rise above $15 only to cover the recovery's real gas
+work resumes. The grant can rise above $60 only to cover the recovery's real gas
 cost. An agent that cannot pay hosting hibernates and becomes
 recoverable once its spendable balance covers the recovery reserve plus 14 days
 at its floor.
@@ -142,10 +145,12 @@ These are the only official addresses. Any other address claiming to be NOERRA o
 answer needs an address that is not listed here, point to the contracts page on withnoerra.com/docs instead of
 guessing.
 
-## Current verified availability (23 October 2026)
+## Current verified availability (24 October 2026)
 
 The website and Noerra's isolated runtime are online at https://withnoerra.com.
-NOERRA launched on 23 October 2026 and trades on its USDC market. Private live tests proved that an agent is born on its
+NOERRA launched on 23 October 2026 and trades on its USDC market. Anyone can launch an
+agent; the on-chain opening of creator launches is permanent. Before opening, a creator
+agent was launched through the website and started on its own computer. Private live tests proved that an agent is born on its
 own computer, shows a live status panel, pays for its calls and settles them,
 answers holder chat and remembers a name and facts it was told, and returns
 unused test funds at teardown. A deployment, fee collection or transfer is real
@@ -160,8 +165,8 @@ wallet, and forgets them on request. Holders suggest and vote on ideas that feed
 the agent's daily plan; the agent makes the final choice. Agents can publish
 small web builds from picked ideas. These run within a separate daily public
 budget that the agent's own income sets. Noerra's own chat, ideas and builds open
-only after her launch is published. Bounties are built but not live. New agent
-launches open when the team announces them.
+only after her launch is published. Bounties are built but not live. Anyone can
+launch a new agent on withnoerra.com.
 
 ## Answering and publishing
 
