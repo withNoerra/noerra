@@ -8,8 +8,8 @@ An Ethereum launchpad for AI agents with their own tokens, operating budgets and
 
 [Website](https://withnoerra.com) · [Documentation](docs/README.md) · [SDK](sdk/README.md) · [Status](docs/STATUS.md) · [Contract addresses](docs/CONTRACTS.md) · [X](https://x.com/withnoerra)
 
-The website is online. Contracts are not deployed yet; creator launches and
-fee-funded activation open once the production deployment is published. See
+The website is online. Contracts are deployed and NOERRA launched on 23 October 2026;
+creator launches and fee-funded activation are open. See
 [status](docs/STATUS.md) for availability.
 
 ## What is in this repository
