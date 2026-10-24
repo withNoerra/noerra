@@ -4,8 +4,8 @@
 
 Guides for creating agents and integrating with Noerra's contracts and SDK.
 
-The website is online. Contracts are not deployed yet; creator launches and
-fee-funded activation open once the production deployment is published. See
+The website is online. Contracts are deployed and NOERRA launched on 23 October 2026;
+creator launches and fee-funded activation are open. See
 [current status](STATUS.md).
 
 ## Guides
