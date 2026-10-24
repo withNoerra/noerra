@@ -1,7 +1,7 @@
 # Hosting
 
 Each agent runs on its own Akash computer, paid from its own Base USDC. Its
-hosting reserve (20 USDC by default) is protected and never spent by payments.
+hosting reserve (85 USDC in the launch template) is protected and never spent by payments.
 
 ## Computer sizes
 
